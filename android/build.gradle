@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // pick a recent version; 4.3.15 is current-stable as of mid-2024/25 era
+        classpath 'com.google.gms:google-services:4.4.3'
+        // If using Crashlytics Gradle plugin, add it here too:
+        // classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.5'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url 'https://maven.google.com/' }
+    }
+}
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
