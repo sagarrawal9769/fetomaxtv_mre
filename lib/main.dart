@@ -14,10 +14,10 @@ void main() async{
       name: "Fetomax TV",
       options: FirebaseOptions(
           apiKey:
-          "AIzaSyDi61-dGcHSY_ReRXRAu_YHesB5wlr9jwk",
-          appId:  "1:527776070670:android:da35dd8e6b24604449505f",
-          messagingSenderId:  "527776070670",
-          projectId: "fetosense-v2-2"
+          "<Api Key To Your Project>",
+          appId:  "<Your App Id>",
+          messagingSenderId:  "<Your Messaging Sender ID>",
+          projectId: "<Your Project ID>"
       )
   );
 

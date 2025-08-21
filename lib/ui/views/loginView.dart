@@ -325,7 +325,7 @@ class _LoginViewState extends State<LoginView> {
     print("flutter: Android ID "+ (_androidId ?? "null"));
     print("flutter: Anon ID " + (_anonmousUserID ?? "null"));
     if (hasAndroid && hasAnon) {
-      qrData = "https://cmconnect.caremother.in/"
+      qrData = "https://xyz.xyz.in/"
           "?tvAndroidID=$_androidId"
           "&tvAnonUID=$_anonmousUserID";
     } else {
